@@ -42,12 +42,12 @@ function love.draw()
         love.graphics.rectangle("fill", 398, i, 4, 15)
     end
 
-    -- Draw left paddle
-    love.graphics.setColor(1, 1, 1)
+    -- Draw left paddle (my change: blue)
+    love.graphics.setColor(0.3, 0.7, 1)
     love.graphics.rectangle("fill", player1.x, player1.y, player1.width, player1.height)
 
-    -- Draw right paddle
-    love.graphics.setColor(1, 1, 1)
+    -- Draw right paddle (my change: orange)
+    love.graphics.setColor(1, 0.6, 0.25)
     love.graphics.rectangle("fill", player2.x, player2.y, player2.width, player2.height)
 
     -- Draw ball
@@ -57,9 +57,10 @@ end
 
 function love.update(dt)
     -- Move paddles (speed is in pixels per second)
-    if love.keyboard.isDown("w") then
+    -- Scancodes keep W/S working even with an Arabic keyboard layout.
+    if love.keyboard.isDown("w") or love.keyboard.isScancodeDown("w") then
         player1.y = player1.y - player1.speed * dt
-    elseif love.keyboard.isDown("s") then
+    elseif love.keyboard.isDown("s") or love.keyboard.isScancodeDown("s") then
         player1.y = player1.y + player1.speed * dt
     end
 
