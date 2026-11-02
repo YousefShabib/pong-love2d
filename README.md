@@ -19,6 +19,6 @@ The left paddle is blue and the right paddle is orange.
 ![Pong gameplay](screenshots/pong.png)
 
 ## Demo
-[Watch the gameplay demo](demo/pong-demo.mp4) (scripted keyboard input).
+[Watch the gameplay demo](demo/Demo.mov).
 
 [Tutorial](https://www.youtube.com/watch?v=igQPL0Ali8M)
